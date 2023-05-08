@@ -1,3 +1,8 @@
+<div class="icon">
+    <i class="material-icons first" (click)="scrollOff()">arrow_drop_up</i>
+    <i class="material-icons" (click)="scrollOn()" >arrow_drop_down</i>
+</div>
+
 <div class="container">
     <div class="genre">
         <div class="logo">
@@ -16,43 +21,37 @@
                   <option>Option 5</option>
                 </select>
             </div>
-            <div class="movie-add">
-                Ajouter un extrait
-                <i class="material-icons">movie-creation</i>
+            <div class="movie-add" (click)="goToAddVideo()">
+                <h3>Ajouter un extrait</h3>
             </div>
             
         </div>
     </div>
-    <div class="cont">
+    <div class="cont" *ngFor="let video of videos;let i = index" id="{{i+'video'}}">
         <div class="video">
-            <video controls autoplay>
-                <source src="../../../assets/Video_23-05-04_19-45-12.mov">
+            <video controls>
+                <source [src]="video.extraits[0].src">
             </video>
         </div>
         <div class="desc">
             <div class="titre">
-                Vous regardez <span>Mathilda</span>
+                Vous regardez <span>{{video.title}}</span>
             </div>
             <div class="lorem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus quas, itaque magnam porro odit dicta dolorem maxime ipsum sunt iusto ducimus, iste maiores. Natus consequatur quod minima sunt totam.
+                {{video.description}}
             </div>
             <div class="dispo">
-                Disponible sur <span>Netflix</span>
+                Disponible sur <span>{{video.disponible}}</span>
             </div>
            <div class="btn">
                 <button>Voir film complet</button>
            </div>
             <div class="trait"></div>
             <div class="liste">
-                Liste d'extraits pour ce film
+                <div class="liste-item">Liste d'extraits pour ce film</div>
+                <span></span>
                 <div class="videos">
-                    <video  src="../../../assets/Video_23-05-04_19-45-12.mov">
-                    </video>
-                    <video  src="../../../assets/Video_23-05-04_02-02-58.mov">
-                    </video>
-                    <video  src="../../../assets/Video_23-05-04_19-45-12.mov">
-                    </video>
-                    <video  src="../../../assets/Video_23-05-04_02-02-58.mov">
+                    <video *ngFor="let extrait of video.extraits" [src]="extrait.src">
                     </video>
                 </div>
             </div>

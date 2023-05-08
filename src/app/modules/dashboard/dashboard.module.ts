@@ -10,6 +10,7 @@ import { DashboardRoutesModule } from 'src/app/routes/dashboard-routing';
   imports: [
     CommonModule,
     DashboardRoutesModule
+
   ],
   //exports: [DashboardComponent]
 })

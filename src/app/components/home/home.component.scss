@@ -1,0 +1,143 @@
+.container {
+        padding: 0 0 0.2em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        font-weight: 900;
+        font-size: 2.5rem;
+        //letter-spacing: 3px;
+        color: rgb(255, 255, 255);
+        span {
+            font-style: oblique;
+            color: red;
+        }
+        .logo {
+            margin-left: 30px;
+        }
+}
+.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../../../assets/images/movie-theater-g50670461c_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .accroche {
+        width: 40%;
+        margin: 4rem 0 0 2rem;
+        background-color: black;
+        padding: 1em;
+        border-radius: 25px;
+        .text {
+            h3 {
+                font-size: 2rem;
+            }
+            .text1 {
+                font-weight: bold;
+                font-size: 1.4rem;
+
+            }
+        }
+    }
+    .form {
+        width: 40%;
+        height: 400px;
+        background-color: black;
+        padding: 2em;
+        border-radius: 30px;
+        text-align: center;
+        .form-input {
+            width: 100%;
+            .input {
+                width: 100%;
+                margin: 0 0 2em 0;
+                text-align: center;
+                input {
+                    width: 90%;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 1.6rem;
+                    border-radius: 25px;
+                }
+            }
+            button {
+                width: 90%;
+                padding: 14px 1em;
+                border-radius: 25px;
+                border: none;
+                background-color: blue;
+                color: white;
+                font-weight: bold;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+        .trait {
+
+            border: 1px solid lightgray;
+            margin: 2em auto;
+            width: 90%;
+        }
+        button {
+            width: 90%;
+            padding: 10px 1em;
+            border-radius: 25px;
+            border: none;
+            background-color: rgb(124, 231, 124);
+            color: black;
+            font-weight: bold;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
+.form {
+    text-align: center;
+    padding: 2em;
+    .form-input {
+        width: 100%;
+        .input {
+            width: 100%;
+            margin: 0 0 2em 0;
+            text-align: center;
+            input {
+                width: 90%;
+                padding: 5px;
+                text-align: center;
+                font-size: 1.6rem;
+                border-radius: 25px;
+            }
+        }
+        button {
+            width: 90%;
+            padding: 10px 1em;
+            border-radius: 25px;
+            border: none;
+            background-color: black;
+            color: red;
+            font-weight: bold;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+    .trait {
+
+        border: 1px solid lightgray;
+        margin: 2em auto;
+        width: 90%;
+    }
+    button {
+        width: 90%;
+        padding: 10px 1em;
+        border-radius: 25px;
+        border: none;
+        background-color: rgb(124, 231, 124);
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}

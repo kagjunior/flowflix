@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="logo">
+        Flow-<span>flix</span>
+    </div>
+</div>
+<div class="flex">
+    <div class="accroche">
+        <div class="text">
+            <h3>
+                Vous souhaitez regarder un film ou une série mais vous ne savez pas lequel ou laquelle regarder ?<br>
+                <span style="color: red;">Flow-flix</span> vous suggére une sélection d'extraits de films émouvants. <br>
+                Alors n'attendez plus, il suffit juste de vous connecter et c'est parti pour l'aventure.
+            </h3>
+            <h2>Plongez dans l'univers du 7ème art avec notre sélection d'extraits de films recommandés par notre communauté de passionnés.</h2>
+            <div class="text1">
+                Des instants de rire, de frisson et d'émotion vous attendent sur <span style="color: red;">Flow-flix</span> qui réunit les meilleurs extraits de films proposés par nos utilisateurs. <br><br>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="form-input">
+            <div class="input">
+                <input type="text" placeholder="Votre identifiant">
+            </div>
+            <div class="input">
+                <input type="password" placeholder="Votre mot de passe">
+            </div>
+            <button>Se connecter</button>
+        </div>
+        <div class="trait"></div>
+        <button (click)="openModal()">Créer un nouveau compte</button>
+    </div>
+</div>
+<app-modal title="S'inscrire" #modal>
+    <div class="messagePopup" modal-content>
+        <div class="form">
+            <div class="form-input">
+                <div class="input">
+                    <input type="text" placeholder="Votre nom et prénom">
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Votre email">
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Votre mot de passe">
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Confirmez votre mot de passe">
+                </div>
+                <button>S'inscrire</button>
+            </div> 
+        </div>
+    </div>
+    <div class="footer" modal-footer>
+    </div>
+</app-modal>

@@ -1,60 +1,8 @@
-<div class="icon">
-    <i class="material-icons first" (click)="scrollOff()">arrow_drop_up</i>
-    <i class="material-icons" (click)="scrollOn()" >arrow_drop_down</i>
-</div>
-
 <div class="container">
-    <div class="genre">
-        <div class="logo">
-            Flow-<span>flix</span>
-        </div>
-        <div class="itemnav">
-            <span style="font-size: 1.6rem; font-weight: bold;margin-top: 10px;">
-                Genre:
-            </span>
-            <div class="box">
-                <select>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
-                  <option>Option 4</option>
-                  <option>Option 5</option>
-                </select>
-            </div>
-            <div class="movie-add" (click)="goToAddVideo()">
-                <h3>Ajouter un extrait</h3>
-            </div>
-            
-        </div>
+  <app-menu-left></app-menu-left>
+  <div class="list">
+    <div class="list-item" *ngFor="let video of videos">
+      <app-list-video [videoInput]="video" id="app-list"></app-list-video>
     </div>
-    <div class="cont" *ngFor="let video of videos;let i = index" id="{{i+'video'}}">
-        <div class="video">
-            <video controls>
-                <source [src]="video.extraits[0].src">
-            </video>
-        </div>
-        <div class="desc">
-            <div class="titre">
-                Vous regardez <span>{{video.title}}</span>
-            </div>
-            <div class="lorem">
-                {{video.description}}
-            </div>
-            <div class="dispo">
-                Disponible sur <span>{{video.disponible}}</span>
-            </div>
-           <div class="btn">
-                <button>Voir film complet</button>
-           </div>
-            <div class="trait"></div>
-            <div class="liste">
-                <div class="liste-item">Liste d'extraits pour ce film</div>
-                <span></span>
-                <div class="videos">
-                    <video *ngFor="let extrait of video.extraits" [src]="extrait.src">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

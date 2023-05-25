@@ -127,7 +127,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     //this.video?.onplay()
-   
+
   }
   public scrollOff() {
     this.videoNo--;
@@ -137,8 +137,8 @@ export class DashboardComponent implements OnInit {
           behavior: "smooth",
           block: "start",
           inline: "nearest"
-        }); 
-       }         
+        });
+       }
         if(this.videoNo < 0) {
           this.videoNo = 0;
         }
@@ -148,20 +148,17 @@ export class DashboardComponent implements OnInit {
       this.videoNo++;
        if(this.videoNo > this.videos.length) {
          this.videoNo = this.videos.length;
-       } 
+       }
        if(this.videoNo < this.videos.length) {
         let id = this.videoNo + 'video';
         document.getElementById(id)!.scrollIntoView({
           behavior: "smooth",
           block: "start",
           inline: "nearest"
-        }); 
+        });
        }
   }
 
 
-  public goToAddVideo() {
-    this.router.navigate(['/add-video']);
-  }
 
 }

@@ -1,0 +1,35 @@
+<div class="section">
+  <div class="modal-video" #flixVideo>
+    <span (click)="close()">&times;</span>
+    <video src="{{src}}" controls></video>
+  </div>
+  <div class="flex">
+    <div class="desc">
+      <h2>{{videoInput.title}}</h2>
+      <div class="item">
+        Disponible sur: <h3 style="color: orange">{{videoInput.disponible}}</h3>
+      </div>
+      <div class="genre">
+        Genre: <span>Thriller</span>
+      </div>
+      <div class="button">
+        <button class="btn waves-effect waves-light">
+          Voir le film
+        </button>
+      </div>
+    </div>
+    <div class="video">
+      <video src="{{videoInput.extraits[0].src}}" controls muted="" playsinline="" preload="auto"></video>
+    </div>
+  </div>
+  <div class="extrait">
+    <div class="flex" *ngFor="let extrait of videoInput.extraits;let i = index">
+      <video src="{{extrait.src}}" (click)="modal(extrait.src, i)" id="{{'modal'+i}}"></video>
+      <div class="partie">
+        Partie 1
+      </div>
+    </div>
+  </div>
+</div>
+
+

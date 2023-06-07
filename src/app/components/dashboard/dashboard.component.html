@@ -1,0 +1,8 @@
+<div class="container">
+  <app-menu-left></app-menu-left>
+  <div class="list">
+    <div class="list-item" *ngFor="let video of videos">
+      <app-list-video [videoInput]="video" id="app-list"></app-list-video>
+    </div>
+  </div>
+</div>

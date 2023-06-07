@@ -1,0 +1,22 @@
+.container {
+  max-width: 100%;
+  width: 100%;
+  .list {
+    .titre {
+      padding: 0.7em 3em;
+      color: white;
+      background: linear-gradient(orange, red);
+      border-radius: 15px;
+      text-align: center;
+      width: 60%;
+      margin: 0 auto;
+    }
+    .form {
+      width: 65%;
+      margin-left: 320px;
+      background: black;
+      margin-top: 25px;
+      border-radius: 25px;
+    }
+  }
+}

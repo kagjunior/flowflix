@@ -1,0 +1,44 @@
+.container {
+  max-width: 100%;
+  .menu-left {
+    text-align: center;
+    color: black;
+    height: 100%;
+    background: white;
+    width: 250px;
+    position: fixed;
+    border-radius: 0 0 55px 0;
+    .logo {
+      padding: 1em;
+      margin-top: 2em;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+    .menu-item {
+      margin:2em 0px;
+      div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        margin-left: 55px;
+        h5 {
+          margin-left: 10px;
+        }
+        i {
+          font-size: 2.5rem
+        }
+      }
+      button {
+        background: linear-gradient(orange, red);
+        color: white;
+        margin:3em 0 1em 0;
+      }
+    }
+  }
+  .list {
+    .list-item {
+      margin-left: 280px;
+    }
+  }
+}

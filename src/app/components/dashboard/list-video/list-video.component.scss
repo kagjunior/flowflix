@@ -1,0 +1,120 @@
+nav {
+  background: #24292e;
+  padding: 0 2.5em;
+  //position: fixed;
+  z-index: 10;
+  //top: 0;
+  width: 100%;
+  //left: 0;
+  .flix {
+    color: red;
+    border: 1px solid;
+    padding: 0 1em;
+    border-radius: 50px;
+    background: black;
+  }
+  ul {
+    li {
+      .waves-effect {
+        background: linear-gradient(orange, red);
+        border: 1px solid white;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.section {
+  margin-right: 10px;
+  border-bottom: 10px solid white;
+  margin-bottom: 2em;
+  .modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    display: none;
+    transition: all .8s ease;
+    span {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      z-index: 100;
+      cursor: pointer;
+    }
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+    .desc {
+      background: black;
+      width: 30%;
+      height: 600px;
+      text-align: center;
+      border-radius: 25px;
+      .button {
+        margin-top: 3.5em;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .video {
+      width: 70%;
+
+      video {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 25px;
+      }
+    }
+  }
+  .extrait {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: transparent;
+    border-radius: 25px;
+    margin-top: 10px;
+    height: 250px;
+    overflow: auto;
+    .flex {
+      width: 30%;
+      //margin-left: 10px;
+
+      video {
+        width: 100%;
+        border-radius: 25px;
+        cursor:pointer;
+      }
+      .partie {
+        color: black;
+        margin-left: -96px;
+        font-size: 20px;
+        background: white;
+        padding: 5px 16px;
+        border-radius: 0 15px 15px 0;
+      }
+    }
+    video.shadow {
+      box-shadow: 0 0 0 90vh white;
+    }
+  }
+}
